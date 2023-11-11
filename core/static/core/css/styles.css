@@ -8,24 +8,21 @@
 	content: "";
 }
 
-section {
-  position: relative;
-  left: 100px;
-}
-
 h1 { 
-  margin:80px 0 10px 0;
-  font-size: 52px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  color: #f28705;   
+	margin:25px 10px 10px 50px;
+	font-size: 65px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #f28705;   
 }
 
 h2 {
-  font-size: 24px;
+	margin:5px 10px 5px 50px;
+  	font-size: 24px;
 }
 
 body {
+	display: flex;
     background: #012e40;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -35,15 +32,24 @@ body {
 
 nav {
     float: left;
+	background-color: #0396a6;
     position: relative;
     top: 0;
     left: 0;
-    background: transparent;
     margin: auto;
+	height: 100vh;
 }
 
 nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
 	text-align: center;
+	display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100%;
 }
 
 nav ul li {
@@ -309,4 +315,25 @@ nav ul li div { position: relative; }
 	border-style: solid;
 	border-width: 0 16px 9px 16px;
 	border-color: transparent transparent white transparent;
+}
+
+.content {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.text-container {
+	margin-left: 40px;
+}
+
+.padlock-container {
+	margin-right: 90px;
+    width: 350px;
+}
+
+.padlock-img {
+    max-width: 100%; 
+    height: auto; 
 }

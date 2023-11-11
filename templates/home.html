@@ -1,6 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <h1>Teste</h1>
-    <img src="logo.png">
+    <div class="content">
+        <div class="text-container">
+            <h1>Quer uma senha segura?</h1>
+            <h2>Gere senhas rapidamente!</h2>
+            <h2>Completamente aleatórias!</h2>
+            <h2>Controle os caracteres!</h2>
+        </div>
+        <div class="padlock-container">
+            <img class="padlock-img" src="{% static 'core/images/logo.png' %}">
+        </div>
+    <div>
+
 {% endblock %}
