@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="content">
+        <div class="signup-container">
+            <h1>Seja bem-vindo!</h1>
+            <h2>Por favor, preencha o formulário abaixo para se cadastrar:</h2>
+
+            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}>
+                {% csrf_token %}
+                <div class="form-container">
+                    <div class="form-text">
+                        {% for field in form %}
+                            <div class="fieldWrapper">
+                                {{ field.errors }}
+                                <h2><label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>{{ field }}</h2>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="button-link">
+                        <div class="button">
+                            <h2>Já tenho conta</h2>
+                        </div>
+                    </a>
+                    <button type="submit" class="button">
+                        <h2>Cadastrar</h2>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
