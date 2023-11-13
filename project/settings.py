@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'home'
 
 # Application definition
 
@@ -151,3 +153,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_BACKEND = 'django.reservas.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = "none"

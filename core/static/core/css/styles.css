@@ -418,7 +418,7 @@ nav ul li div { position: relative; }
 	color: #f28705;
 }
 .form-text input {
-    width: 45%; /* Você pode ajustar este valor conforme necessário */
-    padding: 10px; /* Adicione algum preenchimento para melhorar a aparência */
-    box-sizing: border-box; /* Certifique-se de que o preenchimento não afete a largura total */
-}	
+    width: 45%;
+    padding: 10px;
+    box-sizing: border-box;
+}
