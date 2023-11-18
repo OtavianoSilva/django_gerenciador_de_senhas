@@ -47,6 +47,9 @@ INSTALLED_APPS = [
 
     # Meus apps:
     'core',
+
+    # Outros apps:
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

@@ -1,52 +1,45 @@
 {% load static %}
+{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senhão</title>
+    <title>PSWR</title>
     <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    {% bootstrap_css %}
 </head>
 <body>
-    <nav>
-        <ul>
-          <a href="{% url 'home' %}">
-            <li>
-              <div class="home-icon">
-                <div class="roof">
-                  <div class="roof-edge"></div>
-                </div>
-                <div class="front"></div>
-              </div>
-            </li>
-          </a>
-          <li>
-            <div class="about-icon">
-              <div class="head">
-                <div class="eyes"></div>
-                <div class="beard"></div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="work-icon">
-              <div class="paper"></div>
-              <div class="lines"></div>
-              <div class="lines"></div>
-              <div class="lines"></div>
-            </div>
-          </li>
-          <li>
-            <div class="mail-icon">
-              <div class="mail-base">
-                <div class="mail-top"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="#">PSWR</a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+              <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Create</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>My passwords</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Security</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Profile</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
     {% block content %}
     {% endblock %}
+    {% bootstrap_javascript jquery='full' %}
+    <script src="{% static 'core/js/javascript.js' %}" ></script>
 </body>
 </html>
