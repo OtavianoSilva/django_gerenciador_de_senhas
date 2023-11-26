@@ -6,7 +6,7 @@
             <h1>Seja bem-vindo!</h1>
             <h2>Por favor, preencha o formulário abaixo para se cadastrar:</h2>
 
-            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}>
+            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 <div class="form-container">
                     <div class="form-text">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="button-link">
+                    <a href="{% url 'account_login' %}" class="button-link">
                         <div class="button">
                             <h2>Já tenho conta</h2>
                         </div>

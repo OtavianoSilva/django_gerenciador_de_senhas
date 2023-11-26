@@ -11,6 +11,7 @@
     {% bootstrap_css %}
 </head>
 <body>
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-custom navbar-mainbg">
       <a class="navbar-brand navbar-logo" href="#">PSWR</a>
       <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +38,47 @@
           </ul>
       </div>
   </nav>
+=======
+    <nav>
+        <ul>
+          <a href="{% url 'home' %}">
+            <li>
+              <div class="home-icon">
+                <div class="roof">
+                  <div class="roof-edge"></div>
+                </div>
+                <div class="front"></div>
+              </div>
+            </li>
+          </a>
+          <a href="{% url 'account/profile' %}">
+            <li>
+              <div class="about-icon">
+                <div class="head">
+                  <div class="eyes"></div>
+                  <div class="beard"></div>
+                </div>
+              </div>
+            </li>
+          </a>
+          <li>
+            <div class="work-icon">
+              <div class="paper"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+            </div>
+          </li>
+          <li>
+            <div class="mail-icon">
+              <div class="mail-base">
+                <div class="mail-top"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+>>>>>>> 09c96a4d97e3c8b45e7f976d2aec732fdfd4a002
     {% block content %}
     {% endblock %}
     {% bootstrap_javascript jquery='full' %}
